@@ -81,3 +81,5 @@ python manage.py makemigrations
 
 python manage.py migrate
 <!-- Done!. Now you are ready to use your Project. You can see your database fields in MySQL Database. -->
+
+#https://studygyaan.com/django/how-to-use-mysql-database-with-django-project
