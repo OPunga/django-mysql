@@ -50,5 +50,6 @@ Tip – In your database configuration, anyone can see your database username an
 Once you replace the database configuration code, you need to make migrations.
 
 python manage.py makemigrations 
+
 python manage.py migrate
 <!-- Done!. Now you are ready to use your Project. You can see your database fields in MySQL Database. -->
