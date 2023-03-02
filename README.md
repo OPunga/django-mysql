@@ -14,40 +14,68 @@ First, we need to create a database in MySQL for the Django Project. Open your M
 We believe that you have created your project without its migrations. So open your database setting code in settings.py file. You will similar code like bellow –
 
 # settings.py
+
 # Database
+
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+
 DATABASES = {
-    'default': {
+
+    'default':
+    {
+        
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        
     }
+    
 } 
+
 
 After going to database settings in your settings.py file. Replace the database configuration code with the bellow code.
 
+
 # settings.py
+
 # Database
 
-DATABASES = {
-    'default': {
+
+DATABASES = 
+{
+    
+    'default': 
+    {
         'ENGINE': 'django.db.backends.mysql',
+        
         'NAME': 'DB_name',
+        
         'HOST': '127.0.0.1',
+        
         'PORT': '3306',
+        
         'USER': 'DB_user',
+        
         'PASSWORD': 'DB_password',
-    }
+        
+  
+  }
 }
 
-Note –
+<!-- Note – -->
+
 DB_name – is your database name created above
+
 DB_user – is your MySQL Username
+
 DB_password – is your MySQL password
+
 
 Tip – In your database configuration, anyone can see your database username and password. So to protect sensitive
 
+
 Once you replace the database configuration code, you need to make migrations.
+
 
 python manage.py makemigrations 
 
