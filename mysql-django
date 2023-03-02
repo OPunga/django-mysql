@@ -1,0 +1,37 @@
+pip install mysqlclient
+ mysql> CREATE DATABASE sample;
+#Django MySQL settings
+#Replace
+ # settings.py
+# Database
+# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+
+#with
+# settings.py
+# Database
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'DB_name',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'USER': 'DB_user',
+        'PASSWORD': 'DB_password',
+    }
+}
+
+#Note –
+#DB_name – is your database name created above
+#DB_user – is your MySQL Username
+#DB_password – is your MySQL password
+
+#python manage.py makemigrations 
+#python manage.py migrate
